@@ -59,7 +59,7 @@ class Coche extends SimpleCar
 
     public function sonarClaxon()
     {
-        echo "Sonido del claxon: " . $this->claxon . "\n";
+        echo "Sonido del claxon: " . $this->claxon . "<br>";
     }
 
     public function getAnoLanzamiento()
@@ -90,7 +90,7 @@ class CochePolicia extends Coche
 
     public function sirena()
     {
-        echo "Sonido de la sirena: " . $this->sirena . "\n";
+        echo "Sonido de la sirena: " . $this->sirena . "<br>";
     }
 }
 
@@ -98,7 +98,18 @@ class CochePolicia extends Coche
 $renaultKoleos = new Coche("Renault", "Koleos", "123456", 2015, "blanco", "Beep!");
 
 // Mostrar detalles del Renault Koleos
-echo "Marca: " . $renaultKoleos->getMarca() . "\n";
-echo "Modelo: " . $renaultKoleos->getModelo() . "\n";
-echo "Número de serie: " . $renaultKoleos->getNumSerie() . "\n";
-echo "Año de lanzamiento: " . $renaultKoleos->getAnoLanzamiento() . "\n";
+echo "Marca: " . $renaultKoleos->getMarca() . "<br>";
+echo "Modelo: " . $renaultKoleos->getModelo() . "<br>";
+echo "Color: " . $renaultKoleos->getColor() . "<br>";
+$renaultKoleos->sonarClaxon() . "<br>";
+echo "Número de serie: " . $renaultKoleos->getNumSerie() . "<br>";
+echo "Año de lanzamiento: " . $renaultKoleos->getAnoLanzamiento() . "<br>";
+
+echo "<br>";
+// Mostrar detalles cambiando su color
+$renaultKoleos->setColor("negro") . "<br>";
+echo "Marca: " . $renaultKoleos->getMarca() . "<br>";
+echo "Modelo: " . $renaultKoleos->getModelo() . "<br>";
+echo "Color: " . $renaultKoleos->getColor() . "<br>";
+echo "Número de serie: " . $renaultKoleos->getNumSerie() . "<br>";
+echo "Año de lanzamiento: " . $renaultKoleos->getAnoLanzamiento() . "<br>";
