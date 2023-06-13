@@ -57,10 +57,10 @@ class Multimedia
 
     public function imprimirInformacion()
     {
-        echo "Título: " . $this->titulo . "\n";
-        echo "Autor: " . $this->autor . "\n";
-        echo "Formato: " . $this->formato . "\n";
-        echo "Duración: " . $this->duracion . " minutos\n";
+        echo "Título: " . $this->titulo . "<br>";
+        echo "Autor: " . $this->autor . "<br>";
+        echo "Formato: " . $this->formato . "<br>";
+        echo "Duración: " . $this->duracion . " minutos<br>";
     }
 
     public function esIgual($multimedia)
@@ -108,35 +108,35 @@ class Pelicula extends Multimedia
     public function imprimirInformacion()
     {
         parent::imprimirInformacion();
-        echo "Actor principal: " . $this->actorPrincipal . "\n";
-        echo "Actriz principal: " . $this->actrizPrincipal . "\n";
+        echo "Actor principal: " . $this->actorPrincipal . "<br>";
+        echo "Actriz principal: " . $this->actrizPrincipal . "<br>";
     }
 }
 
 class ListaMultimedia
 {
-    private $objetos;
-    private $contador;
-    private $tamano;
+    private $objetosMultimedia;
+    private $contadorListaObjetos;
+    private $objetosMaximos;
 
-    public function __construct($tamano)
+    public function __construct($objetosMaximos)
     {
-        $this->objetos = array();
-        $this->contador = 0;
-        $this->tamano = $tamano;
+        $this->objetosMultimedia = array();
+        $this->contadorListaObjetos = 0;
+        $this->objetosMaximos = $objetosMaximos;
     }
 
-    public function dameTamano()
+    public function dameobjetosMaximos()
     {
-        return $this->contador;
+        return $this->contadorListaObjetos;
     }
 
     public function addObjeto($objeto)
     {
-        if ($this->contador < $this->tamano) {
-            $this->objetos[] = $objeto;
-            $this->contador++;
-            if ($this->contador === $this->tamano) {
+        if ($this->contadorListaObjetos < $this->objetosMaximos) {
+            $this->objetosMultimedia[] = $objeto;
+            $this->contadorListaObjetos++;
+            if ($this->contadorListaObjetos === $this->objetosMaximos) {
                 return true;
             }
         }
@@ -145,25 +145,25 @@ class ListaMultimedia
 
     public function getObjeto($posicion)
     {
-        if ($posicion >= 0 && $posicion < $this->contador) {
-            return $this->objetos[$posicion];
+        if ($posicion >= 0 && $posicion < $this->contadorListaObjetos) {
+            return $this->objetosMultimedia[$posicion];
         }
         return null;
     }
 
     public function imprimirLista()
     {
-        foreach ($this->objetos as $objeto) {
+        foreach ($this->objetosMultimedia as $objeto) {
             $objeto->imprimirInformacion();
-            echo "\n";
+            echo "<br>";
         }
     }
 }
 
-// Crear un objeto de tipo ListaMultimedia de tamano 10
+// Crear un objeto de tipo ListaMultimedia que contiene 10 objetos máximo.
 $listaMultimedia = new ListaMultimedia(10);
 
-// Crear tres películas y anadirlas a la lista
+// Crear tres películas y añadirlas a la lista
 $pelicula1 = new Pelicula("Pelicula 1", "Autor 1", "Formato 1", 120, "Actor 1", "Actriz 1");
 $pelicula2 = new Pelicula("Pelicula 2", "Autor 2", "Formato 2", 90, "Actor 2", "Actriz 2");
 $pelicula3 = new Pelicula("Pelicula 3", "Autor 3", "Formato 3", 105, "Actor 3", "Actriz 3");
