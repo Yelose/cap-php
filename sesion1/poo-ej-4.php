@@ -74,5 +74,3 @@ for ($i = 0; $i < $tamañoArray; $i++) {
     echo "Es fuerte: " . ($arrayPasswordsFuertes[$i] ? 'Sí' : 'No') . "\n";
     echo "\n";
 }
-
-?>

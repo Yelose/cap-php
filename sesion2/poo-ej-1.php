@@ -1,11 +1,14 @@
 <?php
-
 class Persona
 {
-    protected $nombre;
-    protected $apellidos;
-    protected $edad;
+    protected $nombre = "Yelose";
+    protected $apellido = "Apellido";
+    protected $edad = "17";
+}
 
+class Estudiante extends Persona
+{
+    private $curso = "PHP";
 
     /**
      * Get the value of nombre
@@ -28,21 +31,21 @@ class Persona
     }
 
     /**
-     * Get the value of apellidos
+     * Get the value of apellido
      */
-    public function getApellidos()
+    public function getApellido()
     {
-        return $this->apellidos;
+        return $this->apellido;
     }
 
     /**
-     * Set the value of apellidos
+     * Set the value of apellido
      *
      * @return  self
      */
-    public function setApellidos($apellidos)
+    public function setApellido($apellido)
     {
-        $this->apellidos = $apellidos;
+        $this->apellido = $apellido;
 
         return $this;
     }
@@ -66,20 +69,5 @@ class Persona
 
         return $this;
     }
-
-    public function esMayorDeEdad($edad)
-    {
-        if ($edad >= 18) {
-            return true;
-        }
-        return false;
-    }
-
-    public function nombreCompleto()
-    {
-        return $this->nombre . " " . $this->apellidos;
-    }
-
 }
-
 ?>
