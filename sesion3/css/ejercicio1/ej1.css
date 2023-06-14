@@ -1,0 +1,47 @@
+p,
+td,
+caption {
+  font-weight: bolder;
+}
+
+#titulo {
+  color: #158383;
+}
+p > strong,
+p > a[href="#"],
+th[scope="row"]:not(.especial),
+tfoot th {
+  color: red;
+}
+
+.destacado,
+.especial {
+  color: orange;
+}
+
+#subtitulo,
+caption,
+p > a[href="#"] em {
+  color: blue;
+}
+
+p > .especial {
+  color: #c800c8;
+}
+
+table td,
+th {
+  padding: 3px 6px;
+}
+td,
+#adicional a[href="#"] {
+  color: #33a739;
+}
+
+#especial {
+  color: #fe2dfe;
+}
+
+#adicional p {
+  color: #a8a647;
+}
