@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(204, 204, 204);
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+  gap: 3vw;
+}
+
+main {
+  display: flex;
+}
