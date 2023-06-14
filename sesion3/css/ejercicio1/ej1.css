@@ -15,7 +15,8 @@ tfoot th {
 }
 
 .destacado,
-.especial {
+.especial,
+td strong {
   color: orange;
 }
 
