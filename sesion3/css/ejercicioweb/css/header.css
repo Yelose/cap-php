@@ -1,0 +1,11 @@
+header > nav > ul > a {
+  list-style: none;
+  text-decoration: none;
+}
+
+header > nav > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+}
