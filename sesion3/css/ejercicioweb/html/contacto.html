@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Formulario de Contacto</title>
+  </head>
+
+  <body>
+
+    <header>
+      <nav>
+        <ul>
+          <a href="index.html">
+            <li>Inicio</li>
+          </a>
+          <a href="bio.html">
+            <li>Biografía</li>
+          </a>
+          <a href="portfolio.html">
+            <li>Portafolio</li>
+          </a>
+          <a href="contacto.html">
+            <li>Contacto</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+
+    <form name="contacto" id="contacto" method="get" autocomplete="off">
+      <table>
+        <tr>
+          <td>Nombre:&nbsp <input type="text" name="nombre" id="nombre" size="30"></td>
+          <td>Email:&nbsp <input type="email" name="email" id="email" size="50"></td>
+        </tr>
+        <tr>
+          <td>Telefono:&nbsp <input type="tel" name="telefono" id="telefono"></td>
+
+          <!-- Buscar :&nbsp <input type="search" name="Search" id="Search"><br><br> -->
+          <td>Introduce cm tatto :&nbsp <input type="number" name="numero" min="1" max="100" placeholder="1---100 cm"
+              autofocus></td>
+        </tr>
+        <tr>
+          <td>Fecha Nacimiento:&nbsp <input type="date" name="fecha Nacimiento" id="fecha Nacimiento" required></td>
+          <td>Cod.Postal:&nbsp <input pattern="[0-9]{5}" name="postal" placeholder=" 0-9 , 5 digitos"></td>
+        </tr>
+        <tr>
+          <td><label for="zona">Zona tatto:</label>
+            <select id="zona" name="zona">
+              <option value="brazo">Brazo</option>
+              <option value="pierna">pierna</option>
+              <option value="Espalda">Espalda</option>
+              <option value="Cuello">Cuello</option>
+              <option value="Mano">Mano</option>
+              <option value="Pie">Pie</option>
+          </td>
+          <td>
+            <legend>Sexo: </legend>
+            <label>
+              <input type="radio" name="sexo" value="F"> 
+            </label>
+            <label>
+              <input type="radio" name="sexo" value="M"> 
+            </label>
+
+          </td>
+        </tr>
+        <tr>
+          <td></select>
+            <textarea name="message" rows="10" cols="30">
+    Escriba el motivo para realizarte el tatoo.
+    </textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="Pedir Presupuesto sin compromiso">
+        </tr>
+        </td>
+    </form>
+
+
+
+  </body>
+</html>

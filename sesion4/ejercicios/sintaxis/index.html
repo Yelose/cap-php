@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios JavaScript</title>
+    <script src="ej1-sintaxis.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Número mayor</h1>
+    </header>
+    <main>
+      <form>
+        <h2>Introduce 3 números y pulsa Comparar</h2>
+        <div>
+          <input
+            type="number"
+            id="number1"
+            required
+            placeholder="Introduce un número"
+            value="0"
+          />
+          <input
+            type="number"
+            id="number2"
+            required
+            placeholder="Introduce un número"
+            value="0"
+          />
+          <input
+            type="number"
+            id="number3"
+            required
+            placeholder="Introduce un número"
+            value="0"
+          />
+        </div>
+        <button type="button" onclick="comparar()">Comparar</button>
+        <div id="result-max-number">Resultado</div>
+      </form>
+
+      <form>
+        <h2>Contador de letra específica en una frase</h2>
+        <div>
+          <input type="text" id="frase" required placeholder="frase" />
+          <input type="text" id="letra" required placeholder="letra" />
+        </div>
+        <button type="button" onclick="contarLetra()">Contar Letras</button>
+        <div id="result-characters">Resultado</div>
+      </form>
+      <form>
+        <h2>Suma o resta 2 números</h2>
+        <div>
+          <input
+            type="number"
+            id="number4"
+            placeholder="Introduce un número"
+            required
+            value="0"
+          />
+          <select name="suma-o-resta" id="suma-o-resta">
+            <option value="suma" selected>+</option>
+            <option value="resta">-</option>
+          </select>
+          <input
+            type="number"
+            id="number5"
+            placeholder="Introduce un número"
+            required
+            value="0"
+          />
+        </div>
+        <button type="button" onclick="sumarORestar()">Resultado</button>
+        <div id="sumar-o-restar-resultado">Resultado</div>
+      </form>
+      <form id="login-form">
+        <h2>Validación de Usuario</h2>
+        <p>Usuario: usuario, Contraseña: contraseña</p>
+        <div>
+          <input type="text" id="username" required placeholder="Usuario" />
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="Contraseña"
+          />
+        </div>
+        <button type="button" onclick="validarUsuario()">Iniciar sesión</button>
+        <div id="message">Tienes 3 intentos para iniciar sesión</div>
+      </form>
+      <form>
+        <h2>Cosa rara de letras</h2>
+        <div>
+          <input
+            type="text"
+            id="letra-rara"
+            placeholder="introduce una letra"
+          />
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
