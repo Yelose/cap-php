@@ -1,26 +1,26 @@
 .oculto {
   display: none;
-}
-.visible {
-  display: inline;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 body {
   padding: 3vh 3vw;
 }
 
-a[href="#"] {
+a {
   text-decoration: none;
   background-color: azure;
   border: 2px solid blue;
   padding: 1vh 2vw;
   color: blue;
+  cursor: pointer;
 }
 
-a[href="#"]:hover {
+a:hover {
   background-color: #e4fefe;
 }
 
-a[href="#"]:focus {
+a:focus {
   color: blue;
 }
