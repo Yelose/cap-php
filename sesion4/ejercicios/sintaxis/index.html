@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicios JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="ej1-sintaxis.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>Número mayor</h1>
+      <h1>Ejercicios JavaScript</h1>
     </header>
     <main>
       <form>
@@ -44,7 +45,13 @@
         <h2>Contador de letra específica en una frase</h2>
         <div>
           <input type="text" id="frase" required placeholder="frase" />
-          <input type="text" id="letra" required placeholder="letra" />
+          <input
+            type="text"
+            maxlength="1"
+            id="letra"
+            required
+            placeholder="letra"
+          />
         </div>
         <button type="button" onclick="contarLetra()">Contar Letras</button>
         <div id="result-characters">Resultado</div>
@@ -95,8 +102,15 @@
           <input
             type="text"
             id="letra-rara"
+            maxlength="1"
             placeholder="introduce una letra"
           />
+        </div>
+        <button onclick="letraRaraResultadoRaro()" type="button">
+          Aceptar
+        </button>
+        <div id="letra-rara-result">
+          Escribe una letra y pasarán cosas sin sentido.
         </div>
       </form>
     </main>

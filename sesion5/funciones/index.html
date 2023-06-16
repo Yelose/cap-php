@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de Funciones Sesión 5</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <form>
+      <input
+        type="number"
+        id="cifras-entero"
+        placeholder="introduce un número entero"
+      />
+      <button type="button" onclick="contarCifras()">Contar cifras</button>
+      <p id="contar-cifras-result">Resultado</p>
+    </form>
+
+    <form>
+      <input id="asteriscos-input" type="number" placeholder="número de *" />
+      <button type="button" onclick="ponerAsteriscos()">Asteriscos</button>
+      <button type="button" onclick="ponerSecuencia()">Secuencia *+_</button>
+      <button type="button" onclick="mostrarTriangulo()">Triángulo</button>
+      <p id="asteriscos-result">Resultado</p>
+    </form>
+
+    <form>
+      <label for="fecha-inicio">Fecha de inicio:</label>
+      <input type="date" id="fecha-inicio" />
+      <br />
+      <label for="fecha-fin">Fecha de fin:</label>
+      <input type="date" id="fecha-fin" />
+      <br />
+      <button type="button" onclick="calcularDiferencia()">
+        Calcular diferencia
+      </button>
+      <p id="resultado-diferencia"></p>
+    </form>
+  </body>
+</html>

@@ -43,14 +43,11 @@ function sumarORestar() {
   resultSumarORestarElement.innerHTML = `El resultado de la ${operacion} es ${resultado}`;
 }
 
-// Datos de validación correctos
 const validUsername = "usuario";
 const validPassword = "contraseña";
 
-// Contador de intentos
 let loginAttempts = 3;
 
-// Función para validar el usuario
 function validarUsuario() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
@@ -75,14 +72,12 @@ function validarUsuario() {
   }
 }
 
-// Función para mostrar mensajes en el DOM
 function mostrarMensaje(mensaje, tipo) {
   const messageElement = document.getElementById("message");
   messageElement.textContent = mensaje;
   messageElement.className = tipo;
 }
 
-// Función para deshabilitar el formulario después de agotar los intentos
 function deshabilitarFormulario() {
   const form = document.getElementById("login-form");
   const inputs = form.getElementsByTagName("input");
@@ -93,4 +88,24 @@ function deshabilitarFormulario() {
   }
 
   button.disabled = true;
+}
+
+function letraRaraResultadoRaro() {
+  const letraRaraElement = document.getElementById("letra-rara").value;
+  const letrararaResult = document.getElementById("letra-rara-result");
+  let resultadoLetraRara = 0;
+  if (letraRaraElement === "") {
+    return;
+  } else if ((letraRaraElement === "a") | "A") {
+    resultadoLetraRara = 7;
+  } else if ((letraRaraElement === "b") | "B") {
+    resultadoLetraRara = 9;
+  } else if ((letraRaraElement === "c") | "C") {
+    resultadoLetraRara = 101;
+  } else {
+    resultadoLetraRara =
+      "que te has equivocado de letra, pero no te voy a explicar por qué.";
+  }
+
+  letrararaResult.innerHTML = `El resultado es ${resultadoLetraRara}`;
 }
