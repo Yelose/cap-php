@@ -1,0 +1,26 @@
+.oculto {
+  display: none;
+}
+.visible {
+  display: inline;
+}
+
+body {
+  padding: 3vh 3vw;
+}
+
+a[href="#"] {
+  text-decoration: none;
+  background-color: azure;
+  border: 2px solid blue;
+  padding: 1vh 2vw;
+  color: blue;
+}
+
+a[href="#"]:hover {
+  background-color: #e4fefe;
+}
+
+a[href="#"]:focus {
+  color: blue;
+}
