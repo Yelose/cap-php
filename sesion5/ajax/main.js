@@ -16,18 +16,14 @@ fetch("https://opentdb.com/api.php?amount=10")
   });
 
 function getAnswers(correct, incorrects) {
-  const formattedCorrect = `<correct>${correct}</correct>`;
+  const formattedCorrect = `<b>${correct}</b>`;
   incorrects.push(formattedCorrect);
   return incorrects.sort(() => Math.random() - 0.5);
 }
 
 function pintarDOM(question, answers) {
-  const correctAnswer = answers.find((answer) => answer.includes("<correct>"));
   const formattedAnswers = answers.map((answer) => {
-    if (answer === correctAnswer) {
-      return `<p><b>${answer.replace("<correct>", "")}</b></p>`;
-    }
-    return `<p>${answer.replace("<correct>", "")}</p>`;
+    return `<p>${answer}</p>`;
   });
 
   divConPreguntasYRespuestas.innerHTML += `<section><h2>${question}</h2>${formattedAnswers.join(

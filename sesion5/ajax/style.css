@@ -11,7 +11,7 @@ body {
 div {
   display: flex;
   flex-wrap: wrap;
-  gap: 2vh;
+  gap: 5vh;
 }
 section {
   min-width: 350px;

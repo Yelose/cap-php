@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>GitHub user API</title>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Utilizando API de GitHub</h1>
+    </header>
+    <main>
+      <form>
+        <div>
+          <input id="user-input" type="text" placeholder="nombre de usuario" />
+          <span id="buscar-usuario" class="material-symbols-outlined">
+            search
+          </span>
+        </div>
+      </form>
+
+      <section>
+        <h2 id="perfil-titulo">Perfil de usuario</h2>
+        <figure>
+          <img
+            id="user-avatar"
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+            alt="icono de persona sin género"
+          />
+          <figcaption id="user-name">Nombre de usuario</figcaption>
+        </figure>
+        <p id="repositorios">Repositorios</p>
+        <p id="error"></p>
+      </section>
+    </main>
+  </body>
+</html>
