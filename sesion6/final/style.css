@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+body {
+  padding: 2vh 4vw;
+  max-width: 1200px;
+  margin: auto;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+main > header {
+  display: flex;
+  width: 100%;
+}
+h1,
+h2 {
+  text-align: center;
+  width: 100%;
+}
+main > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+main > section > article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+}
+
+figure {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+figure > img {
+  width: 100%;
+}
+.buttons {
+  display: flex;
+  gap: 2vw;
+}
+button {
+  padding: 10px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.estilos-imagen > section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.colors,
+.border-style {
+  display: flex;
+  gap: 10px;
+}
+
+.colors .blue,
+.black,
+.gold,
+.green,
+.border-style > div {
+  width: 15px;
+  height: 15px;
+}
+
+.colors .blue,
+.black,
+.gold,
+.green {
+  border-radius: 50%;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+.blue {
+  background-color: aqua;
+}
+.black {
+  background-color: black;
+}
+.gold {
+  background-color: gold;
+}
+.green {
+  background-color: green;
+}
+.blue-border {
+  border: 5px solid aqua;
+}
+
+.green-border {
+  border: 5px solid green;
+}
+
+.gold-border {
+  border: 5px solid gold;
+}
+
+.black-border {
+  border: 5px solid black;
+}
+
+.estilos-imagen > section > .border-style > .round-border,
+.square-border,
+.medium-round-border {
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+figure > img.blue-border,
+figure > img.green-border,
+figure > img.gold-border,
+figure > img.black-border {
+  border-width: 5px;
+  border-style: solid;
+}
+
+figure > img.round-border {
+  border-radius: 50%;
+}
+
+figure > img.medium-round-border {
+  border-radius: 10px;
+}
+
+figure > img.square-border {
+  border-radius: none;
+}
+.border-style .round-border {
+  border-radius: 50%;
+}
+.border-style .medium-round-border {
+  border-radius: 3px;
+}
