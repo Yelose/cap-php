@@ -47,11 +47,11 @@ function mostrarTriangulo() {
   const asteriscosResultElement = document.getElementById("asteriscos-result");
 
   let triangulo = "";
+  let secuencia = "";
 
   for (let i = 1; i <= numero; i++) {
-    for (let j = 1; j <= i; j++) {
-      triangulo += "*";
-    }
+    secuencia += "*";
+    triangulo += secuencia;
     triangulo += "<br>";
   }
 
