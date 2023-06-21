@@ -56,4 +56,15 @@ El proceso es el siguiente:
 4. La función `contarDigitos($number)` toma como parámetro el número y utiliza recursividad para contar los dígitos.
 5. El resultado se muestra en la página.
 
-## Arch
+## Archivo revertirtexto.php
+
+Este archivo contiene el código para revertir una cadena de texto utilizando recursividad.
+
+El proceso es el siguiente:
+
+1. Se comprueba si el método de solicitud es POST.
+2. Se obtiene el valor del input "text" del formulario.
+3. Se realiza una llamada a la función recursiva `revertirTexto($text)` para revertir la cadena de texto.
+4. La función `revertirTexto($text)` toma como parámetro la cadena de texto y utiliza recursividad para revertirla.
+5. En cada llamada recursiva, se toma el último carácter de la cadena y se concatena con la llamada recursiva del resto de la cadena.
+6. El resultado de la reversión se muestra en la página.
