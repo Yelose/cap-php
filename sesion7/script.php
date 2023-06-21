@@ -15,12 +15,12 @@ $msg_contrasena = "";
 
 if (isset($_POST['aceptar'])) {
     // Checking name
-
+    $sololetras = '/^[A-ZÁÉÍÓÚÜÑÀÈÌÒÙÂÊÎÔÛÄËÏÖÜÇÆŒa-záéíóúüñàèìòùâêîôûäëïöüçæœ]+$/u';
     if (empty($_POST["name"])) {
         $msg_name = "Debes proporcionar tu nombre";
     } else {
         $name = $_POST["name"];
-        if (!preg_match('/^[A-ZÁÉÍÓÚÜÑÀÈÌÒÙÂÊÎÔÛÄËÏÖÜÇÆŒa-záéíóúüñàèìòùâêîôûäëïöüçæœ]+$/u', $name)) {
+        if (!preg_match($sololetras, $name)) {
             $msg_name = "El nombre debe empezar con mayúscula y solo se permiten letras";
         }
     }
