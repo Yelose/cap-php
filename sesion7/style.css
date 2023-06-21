@@ -39,6 +39,12 @@ input {
 .error {
   color: red;
 }
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
 button {
   padding: 7px;
 }

@@ -13,7 +13,6 @@
 
 <body>
     <header>
-
         <h1>Ejercicio Formulario con Validación</h1>
     </header>
     <main>
@@ -27,11 +26,10 @@
                     <p class="error">
                         <?php echo $msg_name; ?>
                     </p>
-
                 </div>
                 <div class="inputfield">
-
-                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos: " />
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos: "
+                        value="<?php echo isset($_POST['apellidos']) ? $_POST['apellidos'] : ''; ?>" />
                     <p class="error">
                         <?php echo $msg_apellidos; ?>
                     </p>
@@ -40,13 +38,15 @@
 
             <div>
                 <div class="inputfield">
-                    <input type="text" id="direccion" name="direccion" placeholder="Dirección: " />
+                    <input type="text" id="direccion" name="direccion" placeholder="Dirección: "
+                        value="<?php echo isset($_POST['direccion']) ? $_POST['direccion'] : ''; ?>" />
                     <p class="error">
                         <?php echo $msg_direccion; ?>
                     </p>
                 </div>
                 <div class="inputfield">
-                    <input type="number" id="cp" name="cp" placeholder="C.P: " />
+                    <input type="number" id="cp" name="cp" placeholder="C.P: "
+                        value="<?php echo isset($_POST['cp']) ? $_POST['cp'] : ''; ?>" />
                     <p class="error">
                         <?php echo $msg_cp; ?>
                     </p>
@@ -55,14 +55,15 @@
 
             <div>
                 <div class="inputfield">
-
-                    <input type="email" id="email" name="email" placeholder="email: " />
+                    <input type="email" id="email" name="email" placeholder="email: "
+                        value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" />
                     <p class="error">
                         <?php echo $msg_email; ?>
                     </p>
                 </div>
                 <div class="inputfield">
-                    <input type="email" id="email2" name="email2" placeholder="Confirma email: " />
+                    <input type="email" id="email2" name="email2" placeholder="Confirma email: "
+                        value="<?php echo isset($_POST['email2']) ? $_POST['email2'] : ''; ?>" />
                     <p class="error">
                         <?php echo $msg_email2; ?>
                     </p>
@@ -71,7 +72,8 @@
 
             <div>
                 <div class="inputfield">
-                    <input type="text" id="dni" name="dni" placeholder="DNI: " />
+                    <input type="text" id="dni" name="dni" placeholder="DNI: "
+                        value="<?php echo isset($_POST['dni']) ? $_POST['dni'] : ''; ?>" />
                     <p class="error">
                         <?php echo $msg_dni; ?>
                     </p>

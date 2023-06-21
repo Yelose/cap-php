@@ -12,6 +12,7 @@ $msg_dni = "";
 $msg_contrasena = "";
 
 
+
 if (isset($_POST['aceptar'])) {
     // Checking name
 
@@ -19,7 +20,7 @@ if (isset($_POST['aceptar'])) {
         $msg_name = "Debes proporcionar tu nombre";
     } else {
         $name = $_POST["name"];
-        if (!preg_match('/^[A-Z][a-zA-Z]*$/', $name)) {
+        if (!preg_match('/^[A-ZÁÉÍÓÚÜÑÀÈÌÒÙÂÊÎÔÛÄËÏÖÜÇÆŒa-záéíóúüñàèìòùâêîôûäëïöüçæœ]+$/u', $name)) {
             $msg_name = "El nombre debe empezar con mayúscula y solo se permiten letras";
         }
     }
@@ -30,8 +31,8 @@ if (isset($_POST['aceptar'])) {
         $msg_apellidos = "Debes proporcionar tus apellidos";
     } else {
         $apellidos = $_POST["apellidos"];
-        if (!preg_match('/^[A-Z][a-zA-Z]*$/', $apellidos)) {
-            $msg_apellidos = "Los apellidos deben empezar con mayúscula y solo se permiten letras";
+        if (!preg_match('/^[A-ZÁÉÍÓÚÜÑÀÈÌÒÙÂÊÎÔÛÄËÏÖÜÇÆŒa-záéíóúüñàèìòùâêîôûäëïöüçæœ\s]+$/u', $apellidos)) {
+            $msg_apellidos = "Los apellidos deben empezar con mayúscula y solo se permiten letras y espacios";
         }
     }
 
@@ -85,5 +86,15 @@ if (isset($_POST['aceptar'])) {
         } elseif (!preg_match('/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*\W).*$/', $contrasena)) {
             $msg_contrasena = "La contraseña debe contener al menos un número, una letra mayúscula, una letra minúscula y un símbolo";
         }
+    }
+
+    $form_valid = empty($msg_name) && empty($msg_apellidos) && empty($msg_direccion) && empty($msg_cp) && empty($msg_email) && empty($msg_email2) && empty($msg_dni) && empty($msg_contrasena);
+
+    if ($form_valid) {
+        // Formulario válido, mostrar mensaje de éxito
+        echo "<p class='success'>El formulario ha sido enviado correctamente.</p>";
+
+        // Borrar contenido de los campos de entrada
+        $_POST = array();
     }
 }
