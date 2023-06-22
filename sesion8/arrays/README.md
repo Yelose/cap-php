@@ -31,14 +31,14 @@
 
 2. Eliminar un elemento del array, no necesariamente el último:
 
-   - Puedes utilizar la función `unset()` para eliminar un elemento específico del array:
+   - Emplea la función específica `unset()` diseñada para eliminar un elemento específico del array:
      ```php
      unset($array[índice]);
      ```
 
 3. Recorrer un array con un foreach:
 
-   - Puedes utilizar un bucle `foreach` para recorrer todos los elementos del array:
+   - Haz uso del bucle `foreach` para recorrer todos los elementos del array:
      ```php
      foreach ($array as $elemento) {
          // Hacer algo con cada $elemento
@@ -47,28 +47,28 @@
 
 4. Obtener la longitud de un array:
 
-   - Puedes utilizar la función `count()` para obtener la cantidad de elementos en un array:
+   - Aplica la función `count()` disponible para obtener la cantidad de elementos en un array:
      ```php
      $longitud = count($array);
      ```
 
 5. Encontrar el máximo de un array de números:
 
-   - Puedes utilizar la función `max()` para encontrar el valor máximo en un array de números:
+   - Valiéndote de la función `max()` podrás encontrar el valor máximo en un array de números:
      ```php
      $maximo = max($array);
      ```
 
 6. Encontrar el mínimo de un array de números:
 
-   - Puedes utilizar la función `min()` para encontrar el valor mínimo en un array de números:
+   - Recurre a la función `min()` para encontrar el valor mínimo en un array de números:
      ```php
      $minimo = min($array);
      ```
 
 7. Obtener la suma y el promedio de un array:
 
-   - Puedes utilizar la función `array_sum()` para obtener la suma de los elementos en un array:
+   - Mediante la función `array_sum()` obtendrás la suma de los elementos en un array:
      ```php
      $suma = array_sum($array);
      ```
@@ -79,14 +79,14 @@
 
 8. Fusionar dos array en uno:
 
-   - Puedes utilizar la función `array_merge()` para fusionar dos o más arrays en uno:
+   - Utilizando la función `array_merge()` para fusionar dos o más arrays en uno:
      ```php
      $nuevo_array = array_merge($array1, $array2);
      ```
 
 9. Comprobar si un elemento existe en un array:
 
-   - Puedes utilizar la función `in_array()` para verificar si un elemento está presente en un array:
+   - Emplea la función `in_array()` para verificar si un elemento está presente en un array:
      ```php
      if (in_array($elemento, $array)) {
          // El elemento existe en el array
@@ -95,13 +95,13 @@
 
 10. Ordenar un array de forma ascendente:
 
-    - Puedes utilizar la función `sort()` para ordenar un array en orden ascendente:
+    - Utilizar la función `sort()` para ordenar un array en orden ascendente:
       ```php
       sort($array);
       ```
 
 11. Ordenar un array de forma descendente:
-    - Puedes utilizar la función `rsort()` para ordenar un array en orden descendente:
+    - Valiéndote de la función predefinida `rsort()` conseguirás ordenar un array en orden descendente:
       ```php
       rsort($array);
       ```
