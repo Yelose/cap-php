@@ -22,6 +22,9 @@
 
 - Ordenar un array de forma descendente.
 
+# 
+  
+
 1. Modificar un elemento del array utilizando su índice:
 
    - Puedes utilizar la asignación directa para modificar el valor de un elemento del array:
