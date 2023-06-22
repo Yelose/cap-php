@@ -22,15 +22,37 @@
 
 - Ordenar un array de forma descendente.
 
-# 
-  
+#
 
 1. Modificar un elemento del array utilizando su índice:
 
    - Puedes utilizar la asignación directa para modificar el valor de un elemento del array:
+
      ```php
      $array[índice] = nuevo_valor;
      ```
+
+   - O también la función `array_replace()` que reemplaza los valores de un array con los valores de otro array, utilizando los índices como referencia:
+
+     ```php
+     $array = array("a" => "apple", "b" => "banana", "c" => "cherry");
+     $arrayReemplazado = array_replace($array, array("b" => "blueberry"));
+
+     print_r($arrayReemplazado);
+     ```
+
+   - El resultado de este ejemplo será:
+
+   ```php
+   Array
+      (
+          [a] => apple
+          [b] => blueberry
+          [c] => cherry
+      )
+   ```
+
+   - En este caso, el elemento del array con índice "b" ha sido modificado y reemplazado por "blueberry".
 
 2. Eliminar un elemento del array, no necesariamente el último:
 
