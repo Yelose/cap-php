@@ -12,12 +12,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-function sumArray($array)
+function sumArray($arrayNum)
 {
-    if (count($array) === 0) {
+    if (empty($arrayNum)) {
         return 0;
     } else {
-        $current = array_shift($array);
-        return $current + sumArray($array);
+        $current = array_shift($arrayNum);
+        return $current + sumArray($arrayNum);
     }
 }
